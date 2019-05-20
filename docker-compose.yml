@@ -1,6 +1,8 @@
 #zf190520.1533
 #source: https://hub.docker.com/r/prom/blackbox-exporter
 
+version: '3'
+
 services:
   blackbox-exporter:
     container_name: "blackbox-exporter"
