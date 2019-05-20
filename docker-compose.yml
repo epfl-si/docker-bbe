@@ -1,0 +1,18 @@
+#zf190520.1533
+#source: https://hub.docker.com/r/prom/blackbox-exporter
+
+services:
+  blackbox-exporter:
+    container_name: "blackbox-exporter"
+    image: prom/blackbox-exporter
+    volumes:
+      - ./config:/config
+    restart: always
+    command: --config.file=/config/blackbox.yml
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
+
