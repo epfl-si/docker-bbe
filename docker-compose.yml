@@ -5,7 +5,7 @@ version: '3'
 
 services:
   blackbox-exporter:
-    container_name: "blackbox-exporter"
+#    container_name: "blackbox-exporter"
     image: prom/blackbox-exporter
     volumes:
       - ./config:/config
